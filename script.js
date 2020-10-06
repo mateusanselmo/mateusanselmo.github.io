@@ -65,13 +65,13 @@ window.onload = () => {
 
     // Objetos
 
-    snake = new Snake(10, 10, 1, 0, 5);
-    apple = new Apple(15, 15);
+    const snake = new Snake(10, 10, 1, 0, 5);
+    const apple = new Apple(15, 15);
     
     // Stage e Contexto
     
-    stage = document.getElementById('Stage');
-    ctx = stage.getContext('2d');
+    const stage = document.getElementById('Stage');
+    const ctx = stage.getContext('2d');
     
 
     // Comando que "chama" o loop e o comando que captura as teclas
