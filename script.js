@@ -199,15 +199,20 @@ window.onload = () => {
     }
 
     function newHScore(score, highscore) {
-        for(i = 0; i < 10; i++){
-            if(score > highscore[i]){
-                highscore[i] = `${score}`;
-                document.getElementById(`${i+1}`).innerHTML = `${highscore[i]}`;
-                console.log(highscore);
-                break;
+            for(i = 0; i < 10; i++){
+                if(score > highscore[i]){
+                    let aux = [...highscore];
+                    highscore[i] = `${score}`;
+                    for(j = 0; j < 10; j++) {
+                            if(aux[j-1] > highscore[j] && j > i) {
+                                highscore[j] = `${aux[j-1]}`;
+                                document.getElementById(`${j+1}`).innerHTML = `${highscore[j]}`;
+                            }
+                    }
+                    document.getElementById(`${i+1}`).innerHTML = `${highscore[i]}`;
+                    break;
             }
         }
     }
-
 }
 
