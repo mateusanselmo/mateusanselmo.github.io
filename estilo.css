@@ -30,6 +30,7 @@ canvas {
     font: normal 16px Arial;
     margin-left: 2%;
     list-style-type: decimal-leading-zero;
+    color:#F99898;
 }
 
 footer {
