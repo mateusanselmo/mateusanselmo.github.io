@@ -38,11 +38,3 @@ canvas {
     border-radius: 5px;
     padding: 40px;
 }
-
-footer {
-    position: absolute;
-    top: 95%;
-    left: 49%;
-    font: italic bold 12px Arial;
-    text-align: center;
-}
